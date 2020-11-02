@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "es2018",
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.iterable"
+    ],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "outDir": "./build/",
+    "sourceMap": true,
+    "strict": true,
+    "paths": {
+      "@*": [
+        "./src/*"
+      ]
+    },
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ],
+    "plugins": [
+      { "name": "typescript-plugin-css-modules" }
+    ]
+  },
+  "include": [
+    "./src/typings/declarations.d.ts",
+    "./src/**/**.ts",
+    "./src/**/**.tsx",
+    "./src/**/**.scss"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

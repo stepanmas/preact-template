@@ -1,0 +1,68 @@
+{
+  "private": true,
+  "name": "fstrk-social",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "webpack -p --env.production",
+    "start": "webpack-dev-server --hot",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/ --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "preact",
+    "ignorePatterns": [
+      "build/"
+    ]
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.5.3",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-preact-pure": "^2.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-preact": "^1.1.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "html-webpack-plugin": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "jest-preset-preact": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "preact-render-spy": "^1.2.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.3.3",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.17.2",
+    "svg-url-loader": "^5.0.0",
+    "terser-webpack-plugin": "^3.0.1",
+    "typescript": "^3.9.2",
+    "typescript-plugin-css-modules": "^2.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "preact": "^10.3.2",
+    "preact-render-to-string": "^5.1.4",
+    "regenerator-runtime": "^0.13.5"
+  },
+  "jest": {
+    "preset": "jest-preset-preact",
+    "setupFiles": [
+      "<rootDir>/tests/__mocks__/browserMocks.js",
+      "<rootDir>/tests/__mocks__/setupTests.js"
+    ]
+  }
+}

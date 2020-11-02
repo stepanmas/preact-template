@@ -1,0 +1,20 @@
+@import "functions";
+@import "mixins";
+
+// Common
+$radius-default: 5px;
+$shadow-default: 0 0 2px rgba(0, 0, 0, 0.2);
+
+// Colors
+$color-text: #373D48;
+$color-background: #fff;
+$color-border: #ECECEC;
+
+// Sizes
+
+// Fonts
+$font-size-default: 12px;
+$font-family-default: 'Open Sans', 'Helvetica Neue', arial, sans-serif !default;
+
+// Animation
+$animate-duration-default: 300ms;

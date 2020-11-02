@@ -1,0 +1,34 @@
+html,
+body {
+  background: transparent;
+  color: #444;
+  font: 400 $font-size-default $font-family-default;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $color-text;
+  text-decoration: none;
+}
+
+textarea {
+  border: none;
+  font: 400 $font-size-default $font-family-default;
+  outline: none;
+  padding: 18px 13px;
+  resize: none;
+  width: 100%;
+}
