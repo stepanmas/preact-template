@@ -36,7 +36,9 @@ module.exports = (env) => ({
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+    })
   ],
   module: {
     rules: [
