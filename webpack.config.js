@@ -56,10 +56,10 @@ module.exports = (env) => ({
               loader: 'css-loader',
               options: {
                 modules: {
+                  exportLocalsConvention: 'camelCase',
                   localIdentName: env?.production ? '[hash:4]' : '[name]-[local]-[hash:4]',
                 },
                 importLoaders: 1,
-                localsConvention: 'camelCase',
               },
             },
             'sass-loader',
