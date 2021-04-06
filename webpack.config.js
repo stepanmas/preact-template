@@ -4,18 +4,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-module.exports = (env) => ({
+const isDev = process.env.NODE_ENV === 'development';
+
+module.exports = () => ({
   name: __dirname,
-  mode: env?.production ? 'production' : 'development',
+  mode: isDev ? 'development' : 'production',
   devtool: 'source-map',
   entry: './src/index.tsx',
   output: {
-    filename: env?.production ? 'bundle.[hash].js' : 'bundle.js',
+    filename: isDev ? 'bundle.js' : 'bundle.[hash].js',
     path: path.resolve(__dirname, 'build'),
     publicPath: '',
   },
   optimization: {
-    minimize: env?.production,
+    minimize: !isDev,
     minimizer: [new TerserPlugin()],
   },
   performance: {
@@ -38,7 +40,7 @@ module.exports = (env) => ({
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: 'public/index.html',
-    })
+    }),
   ],
   module: {
     rules: [
@@ -57,7 +59,7 @@ module.exports = (env) => ({
               options: {
                 modules: {
                   exportLocalsConvention: 'camelCase',
-                  localIdentName: env?.production ? '[hash:4]' : '[name]-[local]-[hash:4]',
+                  localIdentName: isDev ? '[name]-[local]-[hash:4]' : '[hash:4]',
                 },
                 importLoaders: 1,
               },

@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "fstrk-social",
+  "name": "light-template",
   "version": "0.1.0",
   "scripts": {
-    "build": "webpack -p --env.production",
+    "build": "webpack",
     "start": "webpack serve --hot",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src/ --fix",
     "test": "jest"
@@ -15,7 +15,6 @@
     ]
   },
   "devDependencies": {
-    "@types/markdown-it": "^12.0.1",
     "@typescript-eslint/eslint-plugin": "^4.15.2",
     "@typescript-eslint/parser": "^4.15.2",
     "awesome-typescript-loader": "^5.2.1",

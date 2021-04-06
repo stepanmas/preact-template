@@ -1,5 +1,6 @@
 import appStyles from '@components/app.scss';
 import { Component, h } from 'preact';
+import * as React from 'preact/compat';
 
 import { TelegramIcon } from './icons/TelegramIcon';
 
